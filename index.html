@@ -133,17 +133,18 @@
         }
 
         .section-title {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             text-align: center;
+            letter-spacing: 0.02em;
         }
 
         .section-text {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             color: var(--color-text-sub);
             text-align: center;
-            line-height: 2;
+            line-height: 2.2;
             margin-bottom: 1.5rem;
         }
 
@@ -153,89 +154,121 @@
         }
 
         .list li {
-            font-size: 0.95rem;
-            color: var(--color-text-sub);
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
+            font-size: 1rem;
+            color: var(--color-text);
+            padding: 0.7rem 0;
+            padding-left: 1.8rem;
             position: relative;
+            line-height: 1.7;
         }
 
         .list li::before {
-            content: '・';
+            content: '✓';
             position: absolute;
             left: 0;
+            color: var(--color-text-light);
+            font-weight: 700;
         }
 
         /* Benefit Cards */
+        /* Benefit Cards */
         .benefit-card {
-            background: var(--color-bg);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
         }
+
+        /* 
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        */
 
         .benefit-card:last-child {
             margin-bottom: 0;
         }
 
         .benefit-label {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             font-weight: 700;
             color: var(--color-text-light);
-            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
         }
 
         .benefit-title {
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            margin-top: 0.5rem;
         }
 
         .benefit-desc {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--color-text-sub);
             line-height: 1.8;
         }
 
         /* Highlight */
         .highlight {
-            background: var(--color-bg-soft);
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: transparent;
+            padding: 1.5rem 0;
             text-align: center;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+            position: relative;
         }
 
         .highlight p {
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: clamp(1.1rem, 4vw, 2.2rem);
+            font-weight: 800;
             color: var(--color-text);
-            line-height: 1.8;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            margin: 0.5rem 0;
         }
 
         /* Price */
+        /* Price */
         .price-box {
             text-align: center;
+            background: #fff;
+            border: 2px solid #222;
+            border-radius: 12px;
+            padding: 3rem 1.5rem;
+            margin-top: 2rem;
         }
 
         .price-amount {
-            font-size: 2rem;
+            font-size: 3.5rem;
             font-weight: 700;
+            line-height: 1;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
         }
 
         .price-note {
-            font-size: 0.9rem;
-            color: var(--color-text-light);
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text);
+            margin-bottom: 2.5rem;
         }
 
         /* FAQ */
         .faq-item {
-            padding: 1.5rem;
-            background: var(--color-bg);
-            border-radius: 8px;
-            margin-bottom: 1rem;
+            padding: 2rem;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
         }
 
         .faq-item:last-child {
@@ -243,15 +276,16 @@
         }
 
         .faq-q {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-text);
         }
 
         .faq-a {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--color-text-sub);
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         /* Templates */
@@ -382,6 +416,102 @@
             <p class="benefit-label">特典⑤</p>
             <h3 class="benefit-title">優先サポート</h3>
             <p class="benefit-desc">迷ったときに質問可能です。</p>
+        </div>
+    </section>
+
+    <!-- まず最初に手に入るもの -->
+    <section class="section section-soft">
+        <div class="inner">
+            <h2 class="section-title">まず最初に手に入るもの</h2>
+            <p class="section-text">
+                この会員権で、まず最初に手に入るのは<br>
+                「迷わず使える完成形」です。
+            </p>
+            <ul class="list">
+                <li>すぐ使えるビジネス文章テンプレート</li>
+                <li>販売ページ構成テンプレート</li>
+                <li>AIに指示するための完成形プロンプト</li>
+                <li>SNS告知文、FAQテンプレート</li>
+            </ul>
+            <div class="highlight">
+                <p>すべて「考えずにコピペで使える形」<br>で提供します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- テンプレートについて -->
+    <section class="section">
+        <h2 class="section-title">テンプレートについて</h2>
+        <ul class="list">
+            <li>現在、複数カテゴリのテンプレートを収録</li>
+            <li>内容は実務向けに厳選</li>
+            <li>テンプレートは毎月追加・更新されます</li>
+        </ul>
+        <div class="highlight">
+            <p>買い切りではなく、<br>「常に最新の形を使える」<br>月額サービスです。</p>
+        </div>
+    </section>
+
+    <!-- コミュニティについて -->
+    <section class="section section-soft">
+        <div class="inner">
+            <h2 class="section-title">コミュニティについて</h2>
+            <p class="section-text">
+                このコミュニティは、<br>
+                発言しなくても問題ありません。
+            </p>
+            <ul class="list">
+                <li>見るだけOK</li>
+                <li>成功例、失敗例を共有</li>
+                <li>静かに情報を受け取れる場所です</li>
+            </ul>
+            <div class="highlight">
+                <p>人付き合いが苦手な方でも<br>安心して利用できます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 優先サポートについて -->
+    <section class="section">
+        <h2 class="section-title">優先サポートについて</h2>
+        <p class="section-text">
+            技術的な難しい質問ではなく、<br>
+            「どれを使えばいいか分からない」<br>
+            という場面でのサポートです。
+        </p>
+        <div class="highlight">
+            <p>迷った時に、<br>最短で方向だけをお伝えします。</p>
+        </div>
+    </section>
+
+    <!-- なぜAI時代でも価値があるのか -->
+    <section class="section section-soft">
+        <div class="inner">
+            <h2 class="section-title">なぜAI時代でも価値があるのか</h2>
+            <p class="section-text">
+                AIは便利ですが、<br>
+                正解の使い方は教えてくれません。
+            </p>
+            <p class="section-text">
+                この会員権では、<br>
+                AIで作れるものの中から<br>
+                「失敗しにくい完成形」だけを集めています。
+            </p>
+            <div class="highlight">
+                <p>遠回りせず、<br>すぐ使えることを重視しています。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金について（補足） -->
+    <section class="section">
+        <h2 class="section-title">料金について（補足）</h2>
+        <p class="section-text">
+            月額5ドルなので、<br>
+            必要な期間だけ利用できます。
+        </p>
+        <div class="highlight">
+            <p>合わなければ、<br>いつでも解約できます。</p>
         </div>
     </section>
 
