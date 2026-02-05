@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AIは使える。でも" どう使うか"で迷っている人へ。月額5ドルで、完成形ベースのAI活用コンテンツを使い放題。">
-    <title>AI活用コンテンツ | 月額$5</title>
+    <meta name="description" content="考えずに使える AI×ビジネステンプレート会員権。月額5ドルで「そのまま使える完成形」だけを手に入れる。">
+    <title>AI×ビジネステンプレート会員権 | 月額$5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-text: #2a2a2a;
-            --color-text-sub: #4a4a4a;
-            --color-text-light: #6a6a6a;
-            --color-bg: #ffffff;
-            --color-bg-soft: #f8f8f8;
-            --color-border: #e5e5e5;
-            --color-button: #2a2a2a;
-            --color-accent: #3a3a3a;
+            --color-text: #222;
+            --color-text-sub: #444;
+            --color-text-light: #666;
+            --color-bg: #fff;
+            --color-bg-soft: #f7f7f7;
+            --color-border: #e0e0e0;
+            --color-button: #222;
         }
 
         *,
@@ -36,16 +35,15 @@
 
         body {
             font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 400;
             line-height: 1.9;
             color: var(--color-text);
-            background-color: var(--color-bg);
-            letter-spacing: 0.03em;
+            background: var(--color-bg);
+            letter-spacing: 0.02em;
         }
 
         /* Hero */
         .hero {
-            min-height: 88vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,34 +66,46 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 650px;
+            max-width: 700px;
         }
 
         .hero-title {
             font-size: clamp(2.5rem, 7vw, 4rem);
-            font-weight: 600;
-            line-height: 1.45;
-            color: var(--color-text);
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-accent {
+            font-size: clamp(3rem, 9vw, 5rem);
+            display: block;
+            line-height: 1.2;
         }
 
         .hero-sub {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: var(--color-text-sub);
-            margin-bottom: 2.5rem;
-            line-height: 2;
+            margin-bottom: 2rem;
+            line-height: 1.9;
         }
 
-        /* Button */
+        .hero-notes {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
         .btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 500;
             color: #fff;
             background: var(--color-button);
-            border: none;
             border-radius: 6px;
             text-decoration: none;
             transition: opacity 0.2s;
@@ -107,8 +117,8 @@
 
         /* Sections */
         .section {
-            padding: 4.5rem 1.5rem;
-            max-width: 660px;
+            padding: 5rem 1.5rem;
+            max-width: 700px;
             margin: 0 auto;
         }
 
@@ -118,14 +128,13 @@
         }
 
         .section-soft .inner {
-            max-width: 660px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--color-text);
+            font-size: 1.2rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             text-align: center;
         }
@@ -134,15 +143,35 @@
             font-size: 0.95rem;
             color: var(--color-text-sub);
             text-align: center;
-            line-height: 2.1;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Lists */
+        .list {
+            list-style: none;
+        }
+
+        .list li {
+            font-size: 0.95rem;
+            color: var(--color-text-sub);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .list li::before {
+            content: '・';
+            position: absolute;
+            left: 0;
         }
 
         /* Benefit Cards */
         .benefit-card {
             background: var(--color-bg);
             border-radius: 10px;
-            padding: 1.75rem;
-            margin-bottom: 1.25rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .benefit-card:last-child {
@@ -151,161 +180,97 @@
 
         .benefit-label {
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--color-text-light);
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .benefit-title {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
 
         .benefit-desc {
             font-size: 0.9rem;
             color: var(--color-text-sub);
-            line-height: 1.9;
+            line-height: 1.8;
         }
 
-        .benefit-list {
-            list-style: none;
-            margin-top: 0.75rem;
-        }
-
-        .benefit-list li {
-            font-size: 0.9rem;
-            color: var(--color-text-sub);
-            padding-left: 1.25rem;
-            position: relative;
-            margin-bottom: 0.4rem;
-        }
-
-        .benefit-list li::before {
-            content: '・';
-            position: absolute;
-            left: 0;
-        }
-
-        /* Highlight Card */
-        .highlight-card {
+        /* Highlight */
+        .highlight {
             background: var(--color-bg-soft);
-            border-left: 3px solid var(--color-accent);
             padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 0 8px 8px 0;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1.5rem;
         }
 
-        .highlight-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight-title {
-            font-size: 0.95rem;
-            font-weight: 600;
+        .highlight p {
+            font-size: 1rem;
+            font-weight: 700;
             color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        /* Price */
+        .price-box {
+            text-align: center;
+        }
+
+        .price-amount {
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
-        .highlight-desc {
-            font-size: 0.9rem;
-            color: var(--color-text-sub);
-            line-height: 1.85;
-        }
-
-        /* No Need List */
-        .no-need-list {
-            list-style: none;
-            text-align: center;
-        }
-
-        .no-need-list li {
-            font-size: 0.95rem;
-            color: var(--color-text-sub);
-            margin-bottom: 0.6rem;
-        }
-
-        .no-need-note {
+        .price-note {
             font-size: 0.9rem;
             color: var(--color-text-light);
-            text-align: center;
-            margin-top: 1.25rem;
-        }
-
-        /* Steps */
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .step {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .step-num {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--color-bg-soft);
-            border: 1px solid var(--color-border);
-            border-radius: 50%;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--color-text);
-            flex-shrink: 0;
-        }
-
-        .step-text {
-            font-size: 0.95rem;
-            color: var(--color-text-sub);
-            padding-top: 0.2rem;
-        }
-
-        /* Price Section */
-        .price-section {
-            text-align: center;
-        }
-
-        .price-section .section-text {
             margin-bottom: 2rem;
         }
 
         /* FAQ */
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
         .faq-item {
             padding: 1.5rem;
             background: var(--color-bg);
             border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
         }
 
         .faq-q {
             font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--color-text);
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .faq-a {
             font-size: 0.9rem;
             color: var(--color-text-sub);
-            line-height: 1.85;
+            line-height: 1.8;
+        }
+
+        /* Templates */
+        .template-list {
+            background: var(--color-bg-soft);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .template-note {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            text-align: center;
+            margin-top: 1rem;
         }
 
         /* Footer */
         .footer {
-            padding: 2rem 1.5rem;
+            padding: 2rem;
             text-align: center;
             border-top: 1px solid var(--color-border);
         }
@@ -315,19 +280,18 @@
             color: var(--color-text-light);
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             .hero {
-                min-height: 80vh;
-                padding: 2rem 1.25rem;
+                min-height: 85vh;
+                padding: 2rem 1rem;
             }
 
             .hero-title {
-                font-size: 1.45rem;
+                font-size: clamp(2rem, 8vw, 3rem);
             }
 
             .section {
-                padding: 3.5rem 1.25rem;
+                padding: 3.5rem 1rem;
             }
 
             .btn {
@@ -336,8 +300,9 @@
                 max-width: 300px;
             }
 
-            .benefit-card {
-                padding: 1.5rem;
+            .hero-notes {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -347,165 +312,130 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                AIは使える。<br>
-                でも"どう使うか"で<br>
-                迷っている人へ。
-            </h1>
-            <p class="hero-sub">
-                画像、動画、文章…AIで作れるものは増えました。<br>
-                でも「正解の作り方」は、なかなか見えてきません。<br>
-                このサービスは、完成形ベースで"学ばずに使える"設計です。
-            </p>
+            <h1 class="hero-title">考えずに使える<br><span class="hero-accent">AI×ビジネス</span></h1>
+            <p class="hero-sub">月5ドルで<br>「そのまま使える完成形」だけを手に入れる</p>
+            <div class="hero-notes">
+                <span>初心者OK</span>
+                <span>コピペで使用可能</span>
+                <span>いつでも解約可能</span>
+            </div>
             <a href="https://app.unlock-protocol.com/checkout?id=6b059514-e110-46e0-a658-7ce813c5d7f5" class="btn"
-                target="_blank" rel="noopener noreferrer">
-                月5ドルで試してみる
-            </a>
+                target="_blank" rel="noopener noreferrer">月5ドルで試してみる</a>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- Who -->
     <section class="section">
-        <p class="section-text">
-            AIツールは日々進化しています。<br>
-            しかし、「何をどう作ればいいか」という部分は、<br>
-            調べれば調べるほど迷ってしまうことがあります。<br>
-            このサービスでは、そのまま使える完成形をお渡しします。<br>
-            試行錯誤の時間を減らし、すぐに実務でお使いいただけます。
-        </p>
+        <h2 class="section-title">こんな人のための会員権です</h2>
+        <ul class="list">
+            <li>AIを使いたいが、何を書けばいいかわからない</li>
+            <li>毎回プロンプトや文章を考えるのが面倒</li>
+            <li>失敗や遠回りをしたくない</li>
+            <li>すぐ仕事やビジネスで使える形が欲しい</li>
+        </ul>
+    </section>
+
+    <!-- Why -->
+    <section class="section section-soft">
+        <div class="inner">
+            <h2 class="section-title">AIが使える時代でも、これが必要な理由</h2>
+            <p class="section-text">
+                AIは便利な道具ですが、<br>
+                何をどう指示するかで結果は大きく変わります。<br>
+                多くの人は「正解の型」を知らないまま使っています。
+            </p>
+            <div class="highlight">
+                <p>この会員権では<br>「考える前の完成形」だけを提供します。</p>
+            </div>
+        </div>
     </section>
 
     <!-- Benefits -->
+    <section class="section">
+        <h2 class="section-title">会員になるとできること</h2>
+
+        <div class="benefit-card">
+            <p class="benefit-label">特典①</p>
+            <h3 class="benefit-title">限定コンテンツに無制限アクセス</h3>
+            <p class="benefit-desc">画像、動画、テンプレート。すべてコピペで使用可能です。</p>
+        </div>
+
+        <div class="benefit-card">
+            <p class="benefit-label">特典②</p>
+            <h3 class="benefit-title">実務で使われている「完成形」テンプレート</h3>
+            <p class="benefit-desc">販売ページ、ビジネス文章、AI指示文（プロンプト）など。</p>
+        </div>
+
+        <div class="benefit-card">
+            <p class="benefit-label">特典③</p>
+            <h3 class="benefit-title">毎月アップデート</h3>
+            <p class="benefit-desc">新テンプレートを定期追加。会員は自動で利用可能です。</p>
+        </div>
+
+        <div class="benefit-card">
+            <p class="benefit-label">特典④</p>
+            <h3 class="benefit-title">会員限定コミュニティ参加</h3>
+            <p class="benefit-desc">活用事例の共有、使い方の確認ができます。</p>
+        </div>
+
+        <div class="benefit-card">
+            <p class="benefit-label">特典⑤</p>
+            <h3 class="benefit-title">優先サポート</h3>
+            <p class="benefit-desc">迷ったときに質問可能です。</p>
+        </div>
+    </section>
+
+    <!-- Templates -->
     <section class="section section-soft">
         <div class="inner">
-            <h2 class="section-title">会員特典</h2>
-
-            <div class="benefit-card">
-                <p class="benefit-label">特典①</p>
-                <h3 class="benefit-title">限定コンテンツ</h3>
-                <p class="benefit-desc">
-                    画像、動画、文章テンプレートを無制限でご利用いただけます。
-                </p>
-                <ul class="benefit-list">
-                    <li>すべて「そのまま使える完成形」でご用意</li>
-                    <li>AIで作れても、設計は真似しにくい内容です</li>
+            <h2 class="section-title">収録テンプレートの一例</h2>
+            <div class="template-list">
+                <ul class="list">
+                    <li>月額サブスク販売ページ構成テンプレート</li>
+                    <li>AIに「売れる文章」を書かせる指示文</li>
+                    <li>初心者向けビジネス説明テンプレ</li>
+                    <li>SNS告知文テンプレ</li>
+                    <li>FAQ自動生成テンプレ</li>
                 </ul>
             </div>
-
-            <div class="benefit-card">
-                <p class="benefit-label">特典②</p>
-                <h3 class="benefit-title">静かなコミュニティ</h3>
-                <p class="benefit-desc">
-                    参加は自由です。見るだけでも問題ありません。
-                </p>
-                <ul class="benefit-list">
-                    <li>質問や事例の共有が可能です</li>
-                    <li>人付き合いが苦手な方でも、ご安心ください</li>
-                </ul>
-            </div>
-
-            <div class="benefit-card">
-                <p class="benefit-label">特典③</p>
-                <h3 class="benefit-title">優先サポート</h3>
-                <p class="benefit-desc">
-                    技術的な相談ではなく、「どれを選べばいいか」を最短でお答えします。
-                </p>
-                <ul class="benefit-list">
-                    <li>迷う時間を減らすためのサポートです</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Highlights -->
-    <section class="section">
-        <h2 class="section-title">他にはない特典</h2>
-
-        <div class="highlight-card">
-            <h3 class="highlight-title">AI活用の「完成形ワークフロー」</h3>
-            <p class="highlight-desc">
-                プロンプトだけでなく、思考の順序や判断のポイントまで含めた設計図を公開しています。
-                真似するだけで、同じ成果物を作ることができます。
-            </p>
-        </div>
-
-        <div class="highlight-card">
-            <h3 class="highlight-title">やってはいけないAI活用例</h3>
-            <p class="highlight-desc">
-                失敗パターンや遠回りになりやすい例を共有しています。
-                時間を無駄にしないための知識として、ぜひご活用ください。
-            </p>
-        </div>
-    </section>
-
-    <!-- No Need -->
-    <section class="section section-soft">
-        <div class="inner">
-            <h2 class="section-title">このサービスで、しなくていいこと</h2>
-            <ul class="no-need-list">
-                <li>勉強する必要はありません</li>
-                <li>専門知識は不要です</li>
-                <li>試行錯誤を繰り返さなくて大丈夫です</li>
-            </ul>
-            <p class="no-need-note">
-                「すぐ使えること」を大切にしています。
-            </p>
-        </div>
-    </section>
-
-    <!-- Steps -->
-    <section class="section">
-        <h2 class="section-title">使い方</h2>
-        <div class="steps">
-            <div class="step">
-                <span class="step-num">1</span>
-                <span class="step-text">コンテンツを選ぶ</span>
-            </div>
-            <div class="step">
-                <span class="step-num">2</span>
-                <span class="step-text">そのまま、または少し調整して使う</span>
-            </div>
-            <div class="step">
-                <span class="step-num">3</span>
-                <span class="step-text">すぐ実務に使う</span>
-            </div>
+            <p class="template-note">※ 実際の内容は会員限定で提供されます</p>
         </div>
     </section>
 
     <!-- Price -->
-    <section class="section section-soft price-section">
-        <div class="inner">
-            <h2 class="section-title">月額5ドル</h2>
-            <p class="section-text">
-                月5ドルですので、必要な月だけご利用いただけます。<br>
-                合わなければ、いつでも解約可能です。<br>
-                まずはお試しからどうぞ。
-            </p>
+    <section class="section">
+        <h2 class="section-title">料金について</h2>
+        <div class="price-box">
+            <p class="price-amount">月額 5ドル</p>
+            <p class="price-note">追加費用なし・いつでも解約可能・更新は月単位</p>
             <a href="https://app.unlock-protocol.com/checkout?id=6b059514-e110-46e0-a658-7ce813c5d7f5" class="btn"
-                target="_blank" rel="noopener noreferrer">
-                月5ドルで試してみる
-            </a>
+                target="_blank" rel="noopener noreferrer">月5ドルで今すぐ始める</a>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section">
-        <h2 class="section-title">よくある質問</h2>
-        <div class="faq-list">
+    <section class="section section-soft">
+        <div class="inner">
+            <h2 class="section-title">よくある質問</h2>
             <div class="faq-item">
                 <p class="faq-q">Q. 本当に初心者でも使えますか？</p>
-                <p class="faq-a">はい。コピーしてお使いいただくだけですので、特別な知識は必要ありません。AIに詳しくない方でも、安心してご利用いただけます。</p>
+                <p class="faq-a">はい。すべてコピペで使える形なので、特別な知識は不要です。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Q. AIで自分で作るのと何が違いますか？</p>
+                <p class="faq-a">AIは道具です。この会員権では「正しい完成形」を提供します。考える必要がありません。</p>
             </div>
             <div class="faq-item">
                 <p class="faq-q">Q. いつでも解約できますか？</p>
-                <p class="faq-a">はい。月単位で、いつでも解約可能です。解約後も、お支払いいただいた期間中はサービスをご利用いただけます。</p>
+                <p class="faq-a">はい。月単位でいつでも解約できます。</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 AI Contents Membership</p>
+        <p>AI×ビジネステンプレート会員権</p>
+        <p>© 2026 · Powered by Unlock</p>
     </footer>
 </body>
 
